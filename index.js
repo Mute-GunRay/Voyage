@@ -2,10 +2,7 @@
 
 function attachPortListeners(){
     let ports = document.getElementsByClassName("trade-port");
-    for (port in ports){
-	console.log(port)
-	//port.addEventListener("click", assignPort);
-    }
+    ports.forEach((port) => port.addEventListener("click", assignPort))
 }
 
 function assignPort(event){
