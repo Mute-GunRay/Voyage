@@ -6,6 +6,10 @@ function attachPortListeners(){
 	port.addEventListener("click", assignPort);
     }
 }
+
+function assignPort(event){
+    console.log(event.target.value);
+}
 /*
   when event is triggered:
    if origin is nil
