@@ -3,7 +3,8 @@
 function attachPortListeners(){
     let ports = document.getElementsByClassName("port");
     for (port in ports){
-	port.addEventListener("click", assignPort);
+	console.log(port)
+	//port.addEventListener("click", assignPort);
     }
 }
 
