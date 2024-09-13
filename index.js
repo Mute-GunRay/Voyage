@@ -1,9 +1,10 @@
 //add on click event listeners to all tags with class port
 
 function attachPortListeners(){
-    let ports = document.getElementsByClassName("trade-port");
-    console.log(ports);
-    ports.forEach((port) => port.addEventListener("click", assignPort))
+    let ports = Array.from(document.getElementsByClassName("trade-port"));
+    for(port in ports){
+	port.addEventListener("click", assignPort);
+    }
 }
 
 function assignPort(event){
