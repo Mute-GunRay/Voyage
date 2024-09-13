@@ -6,7 +6,7 @@ function attachPortListeners(){
 }
 
 function assignPort(event){
-    console.log(event);
+    console.log(event.target.textContent);
 }
 /*
   when event is triggered:
