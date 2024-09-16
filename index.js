@@ -1,12 +1,14 @@
 //add on click event listeners to all tags with class port
 
+let originPort = document.getElementById("origin-port").textContent;
+let destinationPort = document.getElementById("destination-port").textContent;
+
 function attachPortListeners(){
     let ports = Array.from(document.getElementsByClassName("trade-port"));
     ports.forEach((port) => port.addEventListener("click", assignPort));
 }
 
 function assignPort(event){
-    console.log(event.target.textContent);
 }
 /*
   when event is triggered:
