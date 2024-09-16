@@ -1,29 +1,24 @@
-//add on click event listeners to all tags with class port
-
-let originPort = document.getElementById("origin-port").textContent;
-let destinationPort = document.getElementById("destination-port").textContent;
-
-function attachPortListeners(){
-    let ports = Array.from(document.getElementsByClassName("trade-port"));
-    ports.forEach((port) => port.addEventListener("click", assignPort));
-}
-
-function assignPort(event){
-}
+// islands should be composed of various modifiers pulled randomly from the following const arrays
 /*
-  when event is triggered:
-   if origin is nil
-   assign event value to origin
-   if origin is non-nil
-   assign event value to destination
-*/
-
+  const sizeArray
+  const populationArray
+  const devlopmentArray
+  const climateArray
+  const biomeArray
+  const dangerArray
+ */
+// events should be composed of various modifiers pulled randomly from the following const arrays
+// actions that can be taken in response will be generated based on the kind of event
+// events should have a chance to
 /*
-  if origin and destination are set add the "set sail" element
-  element should have an event listener that when triggered should
-  call an async travel function; travel function should take an integer value for travel time;
-  travel time value will be stored in an object of objects holding all the times between all ports
-  travel function should update Dom element to track eta
-*/
+  const kindArray
+  const levelArray
+  const rewardArray
+  const modifierArray
+ */
 
-attachPortListeners()
+// players should be forced to stay on each island for a number of days/ticks based on distance to next island
+// each day should have a random chance to spawn an event
+// distance between islands should be a random number pulled
+// players should be able to buy supplies/items on items with a population
+
