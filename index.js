@@ -27,14 +27,16 @@ function inputName(event){
     // convert target into a text box
     // convert input icon button into a submit button
     // add event listener to submit button
-    switch(){
-    case 'captain-input':
-	break;
-    case 'crew-input':
-	break;
-    case 'ship-input':
-	break;
-    }
+    /*
+      switch(){
+      case 'captain-input':
+      break;
+      case 'crew-input':
+      break;
+      case 'ship-input':
+      break;
+      }
+    */
 }
 
 function updateName(event){
