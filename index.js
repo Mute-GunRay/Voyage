@@ -65,9 +65,9 @@ function buildIsland(){
     let islandBackground = document.getElementById("island-background");
     let islandMidlleground = document.getElementById("island-middleground");
     let islandForeground = document.getElementById("island-foreground");
-    let islandBackground.className = island["climate"];
-    let islandMiddleground.className = island["biome"];
-    let islandForeground.className = `${island["population"]}-${island["development"]}`;
+    islandBackground.className = island["climate"];
+    islandMiddleground.className = island["biome"];
+    islandForeground.className = `${island["population"]}-${island["development"]}`;
 
     return island;
 }
