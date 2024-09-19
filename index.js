@@ -63,7 +63,7 @@ function buildIsland(){
 	"danger": dangerArray[Math.floor(Math.random() * dangerArray.length)],
     };
     let islandBackground = document.getElementById("island-background");
-    let islandMidlleground = document.getElementById("island-middleground");
+    let islandMiddleground = document.getElementById("island-middleground");
     let islandForeground = document.getElementById("island-foreground");
     islandBackground.className = island["climate"];
     islandMiddleground.className = island["biome"];
