@@ -70,11 +70,11 @@ function buildIsland(){
 }
 function buildPerson(){
     let person = {
-	"job": "",
-	"goal": "",
-	"skill": "",
-	"relation": "",
-	"reputation": "",
+	"job": jobArray[Math.floor(Math.random() * jobArray.length)],
+	"goal": goalArray[Math.floor(Math.random() * goalArray.length)],
+	"skill": skillArray[Math.floor(Math.random() * skillArray.length)],
+	"relation": relationArray[Math.floor(Math.random() * relationArray.length)],
+	"reputation": reputaionArray[Math.floor(Math.random() * reputationArray.length)],
     };
 }
 function buildCreature(){
