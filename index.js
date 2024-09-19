@@ -66,7 +66,8 @@ function buildIsland(){
     let islandBackground.className = island["climate"];
     let islandMiddleground.className = island["biome"];
     let islandForeground.className = `${island["population"]}-${island["development"]}`;
-    
+
+    return island;
 }
 function buildPerson(){
     let person = {
@@ -76,22 +77,28 @@ function buildPerson(){
 	"relation": relationArray[Math.floor(Math.random() * relationArray.length)],
 	"reputation": reputaionArray[Math.floor(Math.random() * reputationArray.length)],
     };
+
+    return person
 }
 function buildCreature(){
     let creature = {
-	"base": "",
-	"size": "",
-	"temperment": "",
-	"toughness": "",
+	"base": baseArray[Math.floor(Math.random() * baseArray.length)],
+	"size": creatureSizeArray[Math.floor(Math.random() * creatureSizeArray.length)],
+	"temperment": creatureTempermentArray[Math.floor(Math.random() * creatureTempermentArray.length)],
+	"toughness": creatureToughnessArray[Math.floor(Math.random() * creatureToughnessArray.length)],
     };
+
+    return creature;
 }
 function buildEvent(){
     let event = {
-	"type": "",
-	"difficulty": "",
-	"reward": "",
-	"modifier": "",
+	"type": eventArray[Math.floor(Math.random() * eventArray.length)],
+	"difficulty": levelArray[Math.floor(Math.random() * levelArray.length)],
+	"reward": rewardArray[Math.floor(Math.random() * rewardArray.length)],
+	"modifier": modifierArray[Math.floor(Math.random() * modifierArray.length)],
     };
+
+    // populate event modal
 }
 
 /*
@@ -109,3 +116,5 @@ function buildEvent(){
   add functions to allow adding/losing crew members;
   add functions to update crewmate stats 
  */
+
+console.log(buildIsland());
