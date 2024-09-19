@@ -22,15 +22,77 @@ const creatureSizeArray = ["tiny", "small", "meduim", "larg", "huge"];
 const creatureTempermentArray = ["friendly", "aggressive", "indifferent", "afraid"];
 const creatureToughnessArray = ["flimsy", "weak", "sturdy", "tough", "beastly", "monsterous"];
 
+function inputName(event){
+    // check against the id of the event target
+    // convert target into a text box
+    // convert input icon button into a submit button
+    // add event listener to submit button
+    switch(){
+    case 'captain-input':
+	break;
+    case 'crew-input':
+	break;
+    case 'ship-input':
+	break;
+    }
+}
 
-/*
-  stage 1:
-  add functions to allow for naming of captian, crew, and ship;
-  add functions to show to update player/overall stats (i.e. treasure, supplies, etc. );
-  add functions to save relevant data to local-storage;
-  add functions to show/hide modals;
-  add functions to compose islands, crew, creatures, and events;
-*/
+function updateName(event){
+    event.preventDefault();
+    // create span element
+    // set textContent to event value
+    // remove event target from dom
+    // append span element to event target parent container
+    // update localStorage state
+    
+}
+function updateStat(stat, change){
+    let stat = document.getElementById(stat);
+    stat.textContent = stat.textContent + change;
+    // update localStorage state
+}
+function buildIsland(){
+    let island = {
+	"size": sizeArray[Math.floor(Math.random() * sizeArray.length)],
+	"climate": climateArray[Math.floor(Math.random() * climateArray.length)],
+	"biome": biomeArray[Math.floor(Math.random() * biomeArray.length)],
+	"population": populationArray[Math.floor(Math.random() * populationArray.length)],
+	"development": developmentArray[Math.floor(Math.random() * developmentArray.length)],
+	"danger": dangerArray[Math.floor(Math.random() * dangerArray.length)],
+    };
+    let islandBackground = document.getElementById("island-background");
+    let islandMidlleground = document.getElementById("island-middleground");
+    let islandForeground = document.getElementById("island-foreground");
+    let islandBackground.className = island["climate"];
+    let islandMiddleground.className = island["biome"];
+    let islandForeground.className = `${island["population"]}-${island["development"]}`;
+    
+}
+function buildPerson(){
+    let person = {
+	"job": "",
+	"goal": "",
+	"skill": "",
+	"relation": "",
+	"reputation": "",
+    };
+}
+function buildCreature(){
+    let creature = {
+	"base": "",
+	"size": "",
+	"temperment": "",
+	"toughness": "",
+    };
+}
+function buildEvent(){
+    let event = {
+	"type": "",
+	"difficulty": "",
+	"reward": "",
+	"modifier": "",
+    };
+}
 
 /*
   stage 2:
