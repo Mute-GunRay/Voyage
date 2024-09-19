@@ -7,7 +7,7 @@ const personReputaionArray = ["unknown", "known", "famous", "notorious", "belove
 // island composition arrays
 const sizeArray = ["tiny", "small", "medium", "large", "huge"];
 const populationArray = ["uninhabited", "inhabited", "sparse", "bustling", "crowded"];
-const devlopmentArray = ["undeveloped", "ramshakle", "developing", "developed", "advanced"];
+const developmentArray = ["undeveloped", "ramshakle", "developing", "developed", "advanced"];
 const climateArray = ["tropical", "temperate", "scorching", "chilly", "frozen"];
 const biomeArray = ["forest", "grassland", "hills", "mountains", "swamp"];
 const dangerArray = ["lethal", "dangerous", "wild", "calm", "peaceful", "joyous"];
