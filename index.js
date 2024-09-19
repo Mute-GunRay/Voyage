@@ -49,8 +49,8 @@ function updateName(event){
     
 }
 function updateStat(stat, change){
-    let stat = document.getElementById(stat);
-    stat.textContent = stat.textContent + change;
+    let statElement = document.getElementById(stat);
+    statElement.textContent = stat.textContent + change;
     // update localStorage state
 }
 function buildIsland(){
