@@ -37,10 +37,12 @@ function buildIsland(){
     islandBackground.className = island["climate"];
     islandMiddleground.className = island["biome"];
     islandForeground.className = `${island["population"]}-${island["development"]}`;
+
+    return island
 }
 
 let voyageButton = document.getElementById("voyage-button");
 voyageButton.addEventListener("submit", (event) => {
     event.preventDefault();
-    buildIsland();
+    console.log(buildIsland());
 });
