@@ -22,37 +22,6 @@ const creatureSizeArray = ["tiny", "small", "meduim", "larg", "huge"];
 const creatureTempermentArray = ["friendly", "aggressive", "indifferent", "afraid"];
 const creatureToughnessArray = ["flimsy", "weak", "sturdy", "tough", "beastly", "monsterous"];
 
-function inputName(event){
-    // check against the id of the event target
-    // convert target into a text box
-    // convert input icon button into a submit button
-    // add event listener to submit button
-    /*
-      switch(){
-      case 'captain-input':
-      break;
-      case 'crew-input':
-      break;
-      case 'ship-input':
-      break;
-      }
-    */
-}
-
-function updateName(event){
-    event.preventDefault();
-    // create span element
-    // set textContent to event value
-    // remove event target from dom
-    // append span element to event target parent container
-    // update localStorage state
-    
-}
-function updateStat(stat, change){
-    let statElement = document.getElementById(stat);
-    statElement.textContent = stat.textContent + change;
-    // update localStorage state
-}
 function buildIsland(){
     let island = {
 	"size": sizeArray[Math.floor(Math.random() * sizeArray.length)],
@@ -68,55 +37,10 @@ function buildIsland(){
     islandBackground.className = island["climate"];
     islandMiddleground.className = island["biome"];
     islandForeground.className = `${island["population"]}-${island["development"]}`;
-
-    return island;
-}
-function buildPerson(){
-    let person = {
-	"job": jobArray[Math.floor(Math.random() * jobArray.length)],
-	"goal": goalArray[Math.floor(Math.random() * goalArray.length)],
-	"skill": skillArray[Math.floor(Math.random() * skillArray.length)],
-	"relation": relationArray[Math.floor(Math.random() * relationArray.length)],
-	"reputation": reputaionArray[Math.floor(Math.random() * reputationArray.length)],
-    };
-
-    return person
-}
-function buildCreature(){
-    let creature = {
-	"base": baseArray[Math.floor(Math.random() * baseArray.length)],
-	"size": creatureSizeArray[Math.floor(Math.random() * creatureSizeArray.length)],
-	"temperment": creatureTempermentArray[Math.floor(Math.random() * creatureTempermentArray.length)],
-	"toughness": creatureToughnessArray[Math.floor(Math.random() * creatureToughnessArray.length)],
-    };
-
-    return creature;
-}
-function buildEvent(){
-    let event = {
-	"type": eventArray[Math.floor(Math.random() * eventArray.length)],
-	"difficulty": levelArray[Math.floor(Math.random() * levelArray.length)],
-	"reward": rewardArray[Math.floor(Math.random() * rewardArray.length)],
-	"modifier": modifierArray[Math.floor(Math.random() * modifierArray.length)],
-    };
-
-    // populate event modal
 }
 
-/*
-  stage 2:
-  add functions to change css selectors to create basic island visuals;
-  add functions to track time / countdown;
-  add functions to travel between islands (pick a distance to next island, then generate next island);
-  add functions for exploring islands ("rolls" for events);
-  add functions for fighting (creating attack/health/defence etc. for crew and other creatures);
-*/
-
-/*
-  stage 3: 
-  add functions to allow for progression when tab is closed;
-  add functions to allow adding/losing crew members;
-  add functions to update crewmate stats 
- */
-
-console.log(buildIsland());
+let voyageButton = document.getElementById("voyage-button");
+voyagebutton.addEventListener("submit", (event) => {
+    event.preventDefault();
+    buildIsland();
+});
