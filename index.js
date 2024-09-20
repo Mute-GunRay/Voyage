@@ -40,7 +40,7 @@ function buildIsland(){
 }
 
 let voyageButton = document.getElementById("voyage-button");
-voyagebutton.addEventListener("submit", (event) => {
+voyageButton.addEventListener("submit", (event) => {
     event.preventDefault();
     buildIsland();
 });
