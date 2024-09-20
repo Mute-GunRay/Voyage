@@ -51,5 +51,5 @@ voyageButton.addEventListener("click", (event) => {
     event.target.disabled = true;
     event.target.textContent = "Sailing. . .";
 
-    setInterval(travel, 100000)
+    setTimeout(travel, 100000);
 });
