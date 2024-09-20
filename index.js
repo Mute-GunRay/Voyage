@@ -21,6 +21,7 @@ const baseArray = ["mammal", "fish", "reptile", "bird", "plant"];
 const creatureSizeArray = ["tiny", "small", "meduim", "larg", "huge"];
 const creatureTempermentArray = ["friendly", "aggressive", "indifferent", "afraid"];
 const creatureToughnessArray = ["flimsy", "weak", "sturdy", "tough", "beastly", "monsterous"];
+let voyageButton = document.getElementById("voyage-button");
 
 function buildIsland(){
     let island = {
@@ -39,11 +40,16 @@ function buildIsland(){
     islandForeground.className = `${island["population"]}-${island["development"]}`;
 }
 
-let voyageButton = document.getElementById("voyage-button");
+function travel(){
+    buildIsland();
+    voyageButton.disabled = false;
+    voyageButton.textContent = "Set Sail!";
+}
+
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
-    buildIsland();
     event.target.disabled = true;
     event.target.textContent = "Sailing. . .";
-    
+
+    setInterval(travel, 100000)
 });
