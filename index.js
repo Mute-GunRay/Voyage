@@ -43,4 +43,7 @@ let voyageButton = document.getElementById("voyage-button");
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     buildIsland();
+    event.target.disabled = true;
+    event.target.textContent = "Sailing. . .";
+    
 });
