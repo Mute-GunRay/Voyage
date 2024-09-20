@@ -44,7 +44,7 @@ voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.target.disabled = true;
     event.target.textContent = "Sailing. . .";
-    let distance = 100000;
+    let distance = Math.floor(Math.random() * 1000000);
     let interval = setInterval(() => {
 	document.getElementById("timer").textContent = `${Math.floor(distance / (1000 * 60 * 60 * 24))}d ${Math.floor((distance % (1000 * 60 * 60 * 24))  / (1000  * 60 * 60))}h ${Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))}m ${Math.floor((distance % (1000 * 60)) / 1000)}s`;
 	distance = distance - 1000;
