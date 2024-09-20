@@ -40,20 +40,13 @@ function buildIsland(){
     islandForeground.className = `${island["population"]}-${island["development"]}`;
 }
 
-function renderETA(distance){
-    let timer = document.getElementById("timer");
-    timer.textContent = `${Math.floor((distance % (1000 * 60)) / 1000)}s`
-}
-
-
-function travel(distance){
-    setInterval(renderETA, 1000, distance);
-    setTimeout(buildIsland, distance);
-}
-
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.target.disabled = true;
     event.target.textContent = "Sailing. . .";
-    travel(100000)
+    setInterval(() => {
+	distance = 100000000;
+	document.getElementById("timer").textContent = `Math.floor((distance % (1000 * 60)) / 1000)s`;
+	distance = distance - 1000;
+    }, 1000)
 });
