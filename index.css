@@ -1,0 +1,18 @@
+#island-background {
+    z-index: 1;
+    background-color: #0EEAFF;
+    min-height: 100%
+}
+
+#island-middleground {
+    z-index: 2;
+    background-color: #B5E655;
+    max-height: 50%
+}
+
+#island-foreground {
+    z-index: 3;
+    background-color: #00ABD8;
+    max-height: 25%;
+}
+
