@@ -14,6 +14,7 @@ const baseArray = ["mammal", "fish", "reptile", "bird", "plant"];
 const creatureSizeArray = ["tiny", "small", "meduim", "larg", "huge"];
 const creatureTempermentArray = ["friendly", "aggressive", "indifferent", "afraid"];
 const creatureToughnessArray = ["flimsy", "weak", "sturdy", "tough", "beastly", "monsterous"];
+
 let voyageButton = document.getElementById("voyage-button");
 
 voyageButton.addEventListener("click", (event) => {
@@ -27,7 +28,7 @@ voyageButton.addEventListener("click", (event) => {
 
 	if(distance < 0){
 	    clearInterval(interval);
-	    buildIsland();
+	    new Island();
 	    voyageButton.disabled = false;
 	    voyageButton.textContent = "Set Sail!"
 	}
