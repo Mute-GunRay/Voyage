@@ -8,11 +8,11 @@ class Island {
     static dangerValue;
     
     constructor () {
-	this.sizeValue = small
-	this.climateValue = hot
-	this.biomeValue = jungle
-	this.climateValue = wet
-	this.dangerValue  = tame
+	this.sizeValue = 'small'
+	this.climateValue = 'hot'
+	this.biomeValue = 'jungle'
+	this.climateValue = 'wet'
+	this.dangerValue  = 'tame'
     }
 
     
