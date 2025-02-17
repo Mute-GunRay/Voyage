@@ -7,14 +7,14 @@ class Island {
     static danger;
     
     constructor () {
-	this.size = setSize(generateRandomValue());
+	this.size = evaluateSize(generateRandomValue());
 	this.climate = setClimate(generateRandomValue());
 	this.population = setPopulation(generateRandomValue());
 	this.development = setDevelopment(generateRandomValue());
 	this.danger = setDanger(generateRandomValue());
     }
 
-    function setSize(randomValue) {
+    function evaluateSize(randomValue) {
 	if(randomValue <= 25){
 	    return "small";
 	} else if(randomValue <= 50){
