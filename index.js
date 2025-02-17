@@ -28,7 +28,7 @@ voyageButton.addEventListener("click", (event) => {
 
 	if(distance < 0){
 	    clearInterval(interval);
-	    island = new Island(genrateRandomValue(), generateRandomValue(), generateRandomValue, generateRanomdValue(), generateRandomValue());
+	    island = new Island(generateRandomValue(), generateRandomValue(), generateRandomValue, generateRanomdValue(), generateRandomValue());
 	    console.log( island.size);
 	    voyageButton.disabled = false;
 	    voyageButton.textContent = "Set Sail!"
