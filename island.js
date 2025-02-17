@@ -1,11 +1,11 @@
 class Island {
     
-    constructor () {
-	this.size = Math.floor(Math.random * 100);
-	this.climate = Math.floor(Math.random * 100);
-	this.population = Math.floor(Math.random * 100);
-	this.development = Math.floor(Math.random * 100);
-	this.danger = Math.floor(Math.random * 100);
+    constructor (size, climate, populationm, development, danger) {
+	this.size = size;
+	this.climate = climate;
+	this.population = population;
+	this.development = development;
+	this.danger = danger;
     }
 
 	get size() {

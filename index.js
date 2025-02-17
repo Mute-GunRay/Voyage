@@ -28,10 +28,14 @@ voyageButton.addEventListener("click", (event) => {
 
 	if(distance < 0){
 	    clearInterval(interval);
-	    island = new Island();
+	    island = new Island(genrateRandomValue(), generateRandomValue(), generateRandomValue, generateRanomdValue(), generateRandomValue());
 	    console.log( island.size);
 	    voyageButton.disabled = false;
 	    voyageButton.textContent = "Set Sail!"
 	}
     }, 1000)
 });
+
+function generateRandomValue(){
+    return Math.floor(Math.random() * 100)
+}
