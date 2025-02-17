@@ -1,10 +1,4 @@
 class Island {
-
-    static size;
-    static climate;
-    static population;
-    static development;
-    static danger;
     
     constructor () {
 	this.size = Math.floor(Math.random * 100);
