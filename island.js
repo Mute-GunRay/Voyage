@@ -14,7 +14,7 @@ class Island {
 	this.danger = setDanger(generateRandomValue());
     }
 
-    function setSize(randomValue){
+    function setSize(randomValue) {
 	if(randomValue <= 25){
 	    return "small";
 	} else if(randomValue <= 50){
@@ -26,7 +26,7 @@ class Island {
 	}
     }
 
-        function setClimate(randomValue){
+        function setClimate(randomValue) {
 	if(randomValue <= 25){
 	    return "arctic";
 	} else if(randomValue <= 50){
@@ -38,7 +38,7 @@ class Island {
 	}
 }
 
-        function setPopulation(randomValue){
+        function setPopulation(randomValue) {
 	if(randomValue <= 25){
 	    return "uninhabited";
 	} else if(randomValue <= 50){
@@ -74,7 +74,7 @@ class Island {
 	}
     }
     
-    function generateRandomValue(){
+    function generateRandomValue() {
 	return Math.floor(Math.random() * 100);
     }
 }
