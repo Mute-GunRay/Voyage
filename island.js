@@ -1,13 +1,11 @@
 class Island {
     
-    constructor (size, climate, populationm, development, danger) {
-	this.size = size;
-	this.climate = climate;
-	this.population = population;
-	this.development = development;
-	this.danger = danger;
-    }
+    constructor () {}
 
+    set size(){
+	this.size = Math.floor(Math.random() * 100)
+    }
+    
 	get size() {
 		if(this.size <= 25){
 	    	return "small";
