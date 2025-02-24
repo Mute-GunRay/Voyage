@@ -1,7 +1,7 @@
-function event(){
-    this.rank;
-    this.reward;
-    this.type;
+function Event(){
+    this.rank = calculateRank();
+    this.reward = calculateReward(3);
+    this.type = chooseType();
 }
 
 function calculateRank(){
