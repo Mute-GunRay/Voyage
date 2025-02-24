@@ -1,11 +1,11 @@
 function Event(){
     this.rank = calculateRank();
-    this.reward = calculateReward(3);
+    this.reward = calculateReward(this.rank);
     this.type = chooseType();
 }
 
 function calculateRank(){
-    return Math.floor(Math.random()* 4);
+    return Math.floor(Math.random()* 4) + 1;
 }
 
 function  calculateReward(rank){

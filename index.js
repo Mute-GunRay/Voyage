@@ -15,7 +15,7 @@ voyageButton.addEventListener("click", (event) => {
 	    event = new Event();
 	    console.log(event);
 	    voyageButton.disabled = false;
-	    voyageButton.textContent = "Set Sail!"
+	    voyageButton.textContent = "Set Sail!";
 	}
     }, 1000)
 });
