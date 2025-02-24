@@ -1,3 +1,6 @@
+const eventTypes = ["animal", "treasure", "bandits", "lost", "storm"];
+
+
 function Event(){
     this.rank = calculateRank();
     this.reward = calculateReward(this.rank);
@@ -13,5 +16,5 @@ function  calculateReward(rank){
 }
 
 function chooseType(){
-    return Math.floor(Math.random() * 10);
+    return Math.floor(Math.random() * 5);
 }
