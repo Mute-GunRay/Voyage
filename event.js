@@ -16,5 +16,5 @@ function  calculateReward(rank){
 }
 
 function chooseType(){
-    return Math.floor(Math.random() * 5);
+    return eventTypes[Math.floor(Math.random() * 5)];
 }
