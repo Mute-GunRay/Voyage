@@ -6,14 +6,16 @@ voyageButton.addEventListener("click", (event) => {
     event.target.textContent = "Sailing. . .";
     let distance = Math.floor(Math.random() * 1000000);
     let interval = setInterval(() => {
-	document.getElementById("timer").textContent = `${Math.floor(distance / (1000 * 60 * 60 * 24))}d ${Math.floor((distance % (1000 * 60 * 60 * 24))  / (1000  * 60 * 60))}h ${Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))}m ${Math.floor((distance % (1000 * 60)) / 1000)}s`;
+	document.getElementById("timer").textContent = `${Math.floor(distance / (1000 * 60 * 60 * 24))}d
+${Math.floor((distance % (1000 * 60 * 60 * 24))  / (1000  * 60 * 60))}h
+${Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))}m
+${Math.floor((distance % (1000 * 60)) / 1000)}s`;
 	distance = distance - 1000;
 
 	if(distance < 0){
 	    clearInterval(interval);
-	    island = new Island();
-	    event = new Event();
-	    console.log(event);
+	    let island = new Island();
+	    displayIslandDetails(island);
 	    voyageButton.disabled = false;
 	    voyageButton.textContent = "Set Sail!";
 	}

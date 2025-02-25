@@ -69,3 +69,15 @@ function convertDangerToText(value){
 	return "savage";
     } 
 }
+
+function displayIslandDetails(island){
+    let islandClimate = document.getElementById("island-climate");
+    let islandPop = document.getElementById("island-population");
+    let islandDevelopment = document.getElementById("island-development");
+    let islandDanger = document.getElementById("island-danger");
+
+    islandClimate.textContent = `Climate: ${island["climate"]}`;
+    islandPop.textContent = `Population: ${island["population"]}`;
+    islandDevelopment.textContent = `Development: ${island["development"]}`;
+    islandDanger.textContent = `Danger: ${island["danger"]}`;
+}
