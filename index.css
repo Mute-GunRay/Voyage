@@ -32,9 +32,11 @@ header{
     flex-direction: column;
     width: fit-content;
     padding: 1rem;
+    margin:  1rem;
 }
 
 #resources {
+    margin: inherit;
     display: inherit;
     flex-direction: inherit;
     width: fit-content;
@@ -45,6 +47,7 @@ header{
 }
 
 #ship {
+    margin: inherit;
     display: inherit;
     flex-direction: inherit;
     padding: inherit;
