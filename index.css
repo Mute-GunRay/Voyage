@@ -15,10 +15,14 @@ header{
     flex-direction: column;
 }
 
+#header-heading {
+    align-self: center;
+    margin:  1rem;
+}
+
 #header-body {
     display: flex;
-    aligh-self: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #side-bar {
