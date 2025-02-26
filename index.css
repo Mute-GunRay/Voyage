@@ -37,7 +37,9 @@ header{
 }
 
 #resources {
-    width: inherit;
+    display: inherit;
+    flex-direction: inherit;
+    width: fit-content;
     padding: inherit;
     border-left:  2px solid black;
     border-right:  2px solid black;
@@ -45,10 +47,12 @@ header{
 }
 
 #ship {
+    display: inherit;
+    flex-direction: inherit;
     padding: inherit;
-    width: inherit;
+    width: fit-content;
     border-left:  2px solid black;
-    border-left: 2px solid black;
+    border-right: 2px solid black;
     border-radius: 5px;
 }
 
