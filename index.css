@@ -8,7 +8,7 @@ body {
 }
 
 header{
-    height: 10%;
+    height: auto;
     width: 100%;
     margin: 2rem;
     display: flex;
@@ -18,14 +18,44 @@ header{
 #header-heading {
     align-self: center;
     margin:  1rem;
+    border-bottom:  2px solid black;
+    border-radius:  5px;
 }
 
 #header-body {
     display: flex;
     justify-content: space-around;
+    border-bottom:  2px solid black;
+    border-radius: 5px;
 }
 
 #side-bar {
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    padding: 1rem;
+}
+
+#resources {
+    width: inherit;
+    padding: inherit;
+    border-left:  2px solid black;
+    border-right:  2px solid black;
+    border-radius:  5px;
+}
+
+#ship {
+    padding: inherit;
+    width: inherit;
+    border-left:  2px solid black;
+    border-left: 2px solid black;
+    border-radius: 5px;
+}
+
+#resources > span {
+    padding: inherit;
+}
+
+#ship > span {
+    padding: inherit;
 }
