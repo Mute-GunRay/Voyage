@@ -14,10 +14,16 @@ ${Math.floor((distance % (1000 * 60)) / 1000)}s`;
 
 	if(distance < 0){
 	    clearInterval(interval);
-	    let island = new Island();
+	    let previousIsland = island;
+	    console.log(previousIsland);
+	    let island = nextIsland;
+	    console.log(island);
+	    let nextIsland = new Island();
+	    console.log(nextIsland);
 	    displayIslandDetails(island);
 	    voyageButton.disabled = false;
 	    voyageButton.textContent = "Set Sail!";
 	}
     }, 1000)
 });
+

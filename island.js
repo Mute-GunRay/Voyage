@@ -81,3 +81,9 @@ function displayIslandDetails(island){
     islandDevelopment.textContent = `Development: ${island["development"]}`;
     islandDanger.textContent = `Danger: ${island["danger"]}`;
 }
+
+function IslandNode(value, previous, next){
+    this.value = value;
+    this.previous = previous;
+    this.next = next;
+}
