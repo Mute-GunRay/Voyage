@@ -1,7 +1,7 @@
 let voyageButton = document.getElementById("voyage-button");
 let island = new Island();
 let previousIsland = new Island();
-let nextIsland = new Island();
+let nextIsland;
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.target.disabled = true;
@@ -18,7 +18,11 @@ ${Math.floor((distance % (1000 * 60)) / 1000)}s`;
 	    clearInterval(interval);
 	    previousIsland = island;
 	    console.log(previousIsland);
-	    island = nextIsland;
+	    if (nextIsland) {
+		island = nextIsland;
+	    } else {
+		island = new Island();
+	    }
 	    console.log(island);
 	    nextIsland = new Island();
 	    console.log(nextIsland);
