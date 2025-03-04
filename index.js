@@ -2,6 +2,16 @@ let voyageButton = document.getElementById("voyage-button");
 let island = new Island();
 let previousIsland = new Island();
 let nextIsland;
+let crew = new Crew();
+function Crew(){
+    this.size = 0;
+    this.mood = 0;
+    this.loyalty = 0;
+    this.loyalty = 0;
+    this.attack = 0;
+    this.defense = 0;
+}
+
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.target.disabled = true;
