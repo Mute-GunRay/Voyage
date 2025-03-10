@@ -4,11 +4,11 @@ let islandDevelopment = document.getElementById("island-development");
 let islandClimate = document.getElementById("island-climate");
 let islandDanger = document.getElementById("island-danger");
 
-const sizeArray = [];
-const populationArray = [];
-const developmentArray = [];
-const climateArray = [];
-const dangerArray = [];
+const sizeArray = ["small", "medium", "large"];
+const populationArray = ["low", "average", "high"];
+const developmentArray = ["primative", "industrial", "advanced"];
+const climateArray = ["cold", "temperate", "hot"];
+const dangerArray = ["calm", "risky", "fatal"];
 
 function Island() {
     this.size = sizeArray[generateRandomIndex(sizeArray.length)];
