@@ -1,45 +1,28 @@
 let voyageButton = document.getElementById("voyage-button");
 let island = new Island();
-let previousIsland = new Island();
-let nextIsland;
-let crew = new Crew();
-function Crew(){
-    this.size = 0;
-    this.mood = 0;
-    this.loyalty = 0;
-    this.loyalty = 0;
-    this.attack = 0;
-    this.defense = 0;
-}
 
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.target.disabled = true;
     event.target.textContent = "Sailing. . .";
+    runInterval();
+});
+
+function runInterval(){
     let distance = Math.floor(Math.random() * 1000000);
     let interval = setInterval(() => {
-	document.getElementById("timer").textContent = `${Math.floor(distance / (1000 * 60 * 60 * 24))}d
-${Math.floor((distance % (1000 * 60 * 60 * 24))  / (1000  * 60 * 60))}h
-${Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))}m
-${Math.floor((distance % (1000 * 60)) / 1000)}s`;
+	let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	let hours = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+	let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	let seconds = Math.floor((distance % (1000 * 60)) / 1000)
+	document.getElementById("timer").textContent = `${days}:${hours}:${minutes}:${seconds}`;
 	distance = distance - 1000;
-
 	if(distance < 0){
 	    clearInterval(interval);
-	    previousIsland = island;
-	    console.log(previousIsland);
-	    if (nextIsland) {
-		island = nextIsland;
-	    } else {
-		island = new Island();
-	    }
-	    console.log(island);
-	    nextIsland = new Island();
-	    console.log(nextIsland);
-	    displayIslandDetails(island);
+	    island =  new Island();
 	    voyageButton.disabled = false;
 	    voyageButton.textContent = "Set Sail!";
 	}
     }, 1000)
-});
+}
 

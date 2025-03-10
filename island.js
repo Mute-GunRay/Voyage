@@ -1,89 +1,26 @@
+let islandSize = document.getElementById("island-size");
+let islandPopulation = document.getElementById("island-population");
+let islandDevelopment = document.getElementById("island-development");
+let islandClimate = document.getElementById("island-climate");
+let islandDanger = document.getElementById("island-danger");
+
+const sizeArray = [];
+const populationArray = [];
+const developmentArray = [];
+const climateArray = [];
+const dangerArray = [];
+
 function Island() {
-    this.size = convertSizeToText(generateRandomValue());
-    this.population = convertPopulationToText(generateRandomValue());
-    this.development = convertDevelopmentToText(generateRandomValue());
-    this.climate = convertClimateToText(generateRandomValue());
-    this.danger = convertDangerToText(generateRandomValue())
+    this.size = sizeArray[generateRandomIndex(sizeArray.length())];
+    this.population = populationArray[generateRandomIndex(populationArray.length())];
+    this.development = developmentArray[generateRandomIndex(developmentArray.length())];
+    this.climate = climateArray[generateRandomIndex(climateArray.length)];
+    this.danger = dangerArray[generateRandomIndex(dangerArray.length())];
+
+    islandSize.textContent = `Size: ${this.size}`;
+    islandPopulation.textContent = `Population: ${this.population}`;
+    islandDevelopment.textContent = `Development: ${this.development}`;
+    islandClimate.textContent = `Climate: ${this.climate}`;
+    islandDanger.textContent = `Danger: ${this.danger}`;
 }
 
-function generateRandomValue(){
-    return Math.floor(Math.random() *  100);
-}
-
-function convertSizeToText(value){
-    if(value <= 25){
-	return "small";
-    } else if(value <= 50){
-	return "medium";
-    } else if(value <= 75){
-	return "large";
-    } else {
-	return "huge";
-    }
-}
-
-function convertPopulationToText(value){
-    if(value <= 25){
-	return "sparse";
-    } else if(value <= 50){
-	return "small";
-    } else if(value <= 75){
-	return "average";
-    } else {
-	return "metropolitan";
-    }
-}
-
-function convertDevelopmentToText(value){
-    if(value <= 25){
-	return "primative";
-    } else if(value <= 50){
-	return "medieval";
-    } else if(value <= 90){
-	return "industrial";
-    } else {
-	return "advanced";
-    }
-}
-
-function convertClimateToText(value){
-    if(value <= 25){
-	return"arctic";
-    } else if(value <= 50){
-	return "frigid";
-    } else if(value <= 75){
-	return "temperate";
-    } else {
-	return "arid";
-    } 
-}
-
-function convertDangerToText(value){
-    if(value <= 25){
-	return"tranquil";
-    } else if(value <= 50){
-	return "calm";
-    } else if(value <= 75){
-	return "dangerous";
-    } else {
-	return "savage";
-    } 
-}
-
-function displayIslandDetails(island){
-    let islandClimate = document.getElementById("island-climate");
-    let islandPop = document.getElementById("island-population");
-    let islandDevelopment = document.getElementById("island-development");
-    let islandDanger = document.getElementById("island-danger");
-
-    islandClimate.textContent = `Climate: ${island["climate"]}`;
-    islandPop.textContent = `Population: ${island["population"]}`;
-    islandDevelopment.textContent = `Development: ${island["development"]}`;
-    islandDanger.textContent = `Danger: ${island["danger"]}`;
-}
-
-function IslandNode(value, previous, next){
-    this.value = value;
-    this.previous = previous;
-    this.next = next;
-}
