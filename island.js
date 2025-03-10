@@ -11,11 +11,11 @@ const climateArray = [];
 const dangerArray = [];
 
 function Island() {
-    this.size = sizeArray[generateRandomIndex(sizeArray.length())];
-    this.population = populationArray[generateRandomIndex(populationArray.length())];
-    this.development = developmentArray[generateRandomIndex(developmentArray.length())];
+    this.size = sizeArray[generateRandomIndex(sizeArray.length)];
+    this.population = populationArray[generateRandomIndex(populationArray.length)];
+    this.development = developmentArray[generateRandomIndex(developmentArray.length)];
     this.climate = climateArray[generateRandomIndex(climateArray.length)];
-    this.danger = dangerArray[generateRandomIndex(dangerArray.length())];
+    this.danger = dangerArray[generateRandomIndex(dangerArray.length)];
 
     islandSize.textContent = `Size: ${this.size}`;
     islandPopulation.textContent = `Population: ${this.population}`;
