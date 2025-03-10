@@ -1,6 +1,6 @@
 let voyageButton = document.getElementById("voyage-button");
 let island = new Island();
-
+  
 voyageButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.target.disabled = true;
